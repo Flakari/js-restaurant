@@ -1,7 +1,5 @@
-import {createHeader} from './header';
-import {homeTest} from './home';
-
-console.log('Webpack is initialized');
+import { createHeader } from './header';
+import { createHome } from './home';
 
 (function bodyStyle() {
     let body = document.querySelector('body');
@@ -9,5 +7,4 @@ console.log('Webpack is initialized');
 })();
 
 createHeader();
-
-homeTest();
+createHome();

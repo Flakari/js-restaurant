@@ -1,4 +1,6 @@
-export {createHeader};
+export { createHeader };
+
+import { styleNav } from './nav';
 
 function createHeader() {
     let contentDiv = document.querySelector('#content');
@@ -66,53 +68,4 @@ function styleHeader() {
     let headerSize = window.matchMedia('(max-width: 570px)');
     headerMediaQuery(headerSize);
     headerSize.addListener(headerMediaQuery);
-    
-    
-}
-
-function styleNav() {
-    let nav = document.querySelector('nav');
-    let navUl = document.createElement('ul');
-    let homeLi = document.createElement('li');
-    let menuLi = document.createElement('li');
-    let contactLi = document.createElement('li');
-
-    nav.appendChild(navUl);
-    navUl.appendChild(homeLi);
-    navUl.appendChild(menuLi);
-    navUl.appendChild(contactLi);
-
-    let navLi = document.getElementsByClassName('nav-item');
-
-    nav.setAttribute('id', 'main-navigation');
-    nav.setAttribute('style', 'height: 50px;' +
-                              'width: 100%;' +
-                              'background-color: #292929;');
-
-    navUl.setAttribute('id', 'navigation-list');
-    navUl.setAttribute('style', 'margin: 0 auto;' +
-                                'padding: 0;' +
-                                'height: 100%;' +
-                                'display: grid;' +
-                                'grid-template-columns: repeat(3, 1fr);' +
-                                'align-items: center;' +
-                                'width: 800px;' +
-                                'max-width: 100%;' +
-                                'text-align: center;' +
-                                'list-style: none;');
-
-    homeLi.textContent = 'Home';
-    homeLi.setAttribute('class', 'nav-item');
-    menuLi.textContent = 'Menu';
-    menuLi.setAttribute('class', 'nav-item');
-    contactLi.textContent = 'Contact';
-    contactLi.setAttribute('class', 'nav-item');
-   
-    for (let i = 0; i < navLi.length; i++) {
-        navLi[i].setAttribute('style', 'color: white;' +
-                                       'font-size: 2em;' +
-                                       'font-family: "Aharoni", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;' +
-                                       'font-variant: small-caps;');
-    }
-    console.log(navLi.length);
 }
