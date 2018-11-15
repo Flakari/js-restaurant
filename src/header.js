@@ -35,7 +35,7 @@ function styleHeader() {
                                  'background-image: url(images/pizza_header.jpg);' +
                                  'background-position: center;' +
                                  'background-repeat: no-repeat;' +
-                                 'background-size: cover;' +
+                                 'background-size: auto;' +
                                  'background-color: rgba(255, 255, 255, 0.4);' +
                                  'background-blend-mode: lighten;');
 
@@ -68,4 +68,16 @@ function styleHeader() {
     let headerSize = window.matchMedia('(max-width: 570px)');
     headerMediaQuery(headerSize);
     headerSize.addListener(headerMediaQuery);
+
+    function headerBackgroundMediaQuery(size) {
+        if (size.matches) {
+            header.style.backgroundSize = 'auto';
+        } else {
+            header.style.backgroundSize = 'cover';
+        }
+    }
+
+    let headerBackgroundSize = window.matchMedia('(max-width: 1600px)');
+    headerBackgroundMediaQuery(headerBackgroundSize);
+    headerBackgroundSize.addListener(headerBackgroundMediaQuery);
 }
