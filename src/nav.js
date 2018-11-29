@@ -1,4 +1,5 @@
 export { styleNav };
+import { createHome } from './home';
 
 function styleNav() {
     let nav = document.querySelector('nav');
@@ -23,7 +24,7 @@ function styleNav() {
     nav.setAttribute('id', 'main-navigation');
     nav.setAttribute('style', 'height: 50px;' +
                               'width: 100%;' +
-                              'background-color: #292929;');
+                              'background-color: #1d1d1d;');
 
     navUl.setAttribute('id', 'navigation-list');
     navUl.setAttribute('style', 'margin: 0 auto;' +
@@ -51,6 +52,7 @@ function styleNav() {
 
     // Replace Console Logs with imported function calls when ready
     homeLink.addEventListener('click', e => {
+        createHome();
         console.log('Home');
     });
 
