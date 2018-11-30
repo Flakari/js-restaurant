@@ -19,7 +19,6 @@ function createFooter() {
 
     footerText.setAttribute('style', 'margin: 0;' +
                                      'font-style: italic;' +
-                                     'font-weight: bold;' +
                                      'font-family: "Aharoni", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;');
 
     body.appendChild(footer);

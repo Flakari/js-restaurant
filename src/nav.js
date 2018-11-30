@@ -1,5 +1,6 @@
 export { styleNav };
 import { createHome } from './home';
+import { createMenu } from './menu';
 
 function styleNav() {
     let nav = document.querySelector('nav');
@@ -53,11 +54,10 @@ function styleNav() {
     // Replace Console Logs with imported function calls when ready
     homeLink.addEventListener('click', e => {
         createHome();
-        console.log('Home');
     });
 
     menuLink.addEventListener('click', e => {
-        console.log('Menu');
+        createMenu();
     });
     
     contactLink.addEventListener('click', e => {

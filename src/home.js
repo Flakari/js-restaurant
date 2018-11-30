@@ -17,7 +17,7 @@ function createHome() {
     contentGrid.appendChild(contentText);
 
 
-    content.setAttribute('style', 'background-color: #d6a17e;' +
+    content.setAttribute('style', 'background-color: #d0a385;' +
                                   'overflow: hidden;');
     
     contentGrid.setAttribute('style', 'margin: 20px auto;' +
@@ -58,5 +58,4 @@ function createHome() {
     let homeSize = window.matchMedia('(max-width: 920px)');
     mainMediaQuery(homeSize);
     homeSize.addListener(mainMediaQuery);
-    console.log('Home Page Working');
 }
