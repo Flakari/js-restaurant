@@ -1,6 +1,7 @@
 export { styleNav };
 import { createHome } from './home';
 import { createMenu } from './menu';
+import { createContact } from './contact';
 
 function styleNav() {
     let nav = document.querySelector('nav');
@@ -61,7 +62,7 @@ function styleNav() {
     });
     
     contactLink.addEventListener('click', e => {
-        console.log('Contact');
+        createContact();
     });
 
     for (let i = 0; i < navLi.length; i++) {

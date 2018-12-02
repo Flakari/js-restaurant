@@ -39,7 +39,7 @@ function createMenu() {
 
     let menuTitles = ['Pizza', 'Flatbread', 'Calzone', 'Pasta', 'Breadsticks', 'Salad'];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < menuImages.length; i++) {
         let menuItem = document.createElement('div');
         let image = document.createElement('img');
         let title = document.createElement('h3');
@@ -51,7 +51,8 @@ function createMenu() {
 
         menuItem.setAttribute('style', 'background-color: white;' +
                                        'padding: 5px;' +
-                                       'text-align: center;');
+                                       'text-align: center;' +
+                                       'border-radius: 2px;');
 
         title.setAttribute('style', 'margin: 0;' +
                                     'font-family: "Aharoni", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;' +
