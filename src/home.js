@@ -34,7 +34,7 @@ function createHome() {
             contentGrid.style.gridTemplateColumns = 'minmax(50px, 300px) 1fr';
             contentImage.src = 'images/interior2.jpg';
             contentGrid.style.width = '1000px';
-            contentText.style.padding = '0 20px';
+            contentText.style.padding = '10px 20px';
         }
     }
 
@@ -68,8 +68,9 @@ function styleContentText() {
 
     contentText.setAttribute('style', 'white-space: pre-wrap;' +
                                       'font-family: Arial, sans-serif;' +
-                                      'padding: 0 20px;' +
-                                      'text-align: justify;');
+                                      'padding: 10px 20px;' +
+                                      'text-align: justify;' +
+                                      'font-size: 0.9em;');
 
     contentText.textContent = 'Est. 1989. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a mi pellentesque, dapibus velit a, lacinia massa. Vestibulum vehicula leo risus, condimentum blandit nisl suscipit id. Nunc rutrum bibendum urna eu tempor. Cras a dui risus. Phasellus vel consectetur mi, vitae pharetra magna. Duis finibus vehicula justo, sed suscipit libero accumsan eget. Proin in ex ante. Quisque at facilisis eros, sed dictum elit. Praesent commodo nisi et felis ultricies, sed imperdiet lorem suscipit. Morbi justo ex, imperdiet ut purus eget, sollicitudin interdum eros. Maecenas blandit lectus non nibh euismod feugiat. Cras id laoreet ex. Donec lobortis vestibulum augue a eleifend. Pellentesque tempor ac tortor sed viverra.\n\n' +
 

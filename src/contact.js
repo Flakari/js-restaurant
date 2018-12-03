@@ -15,7 +15,6 @@ function createContact() {
     content.appendChild(contentGrid);
 
     contentGrid.setAttribute('style', 'margin: 20px auto;' +
-                                      'background-color: white;' +
                                       'width: 1000px;' +
                                       'max-width: 90%;' +
                                       'display: grid;' +
@@ -45,16 +44,40 @@ function buildContactForm() {
         let contactDiv = document.createElement('div');
         let label = document.createElement('label');
         let input = document.createElement('input');
+        let textArea = document.createElement('textarea');
         contactForm.appendChild(contactDiv);
         contactDiv.appendChild(label);
-        contactDiv.appendChild(input);
+
+        contactForm.setAttribute('style', 'margin: 15px auto;' +
+                                          'width: 450px;' +
+                                          'max-width: 100%;' +
+                                          'font-family: "Aharoni", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;' +
+                                          'font-variant: small-caps;' +
+                                          'background-color: white;' +
+                                          'padding: 20px 10px;' +
+                                          'border-radius: 2px;');
+        
+        contactDiv.setAttribute('style', 'display: grid;' +
+                                         'grid-template-columns: 150px 1fr;' +
+                                         'align-items: center;' +
+                                         'justify-items: stretch;' +
+                                         'margin-bottom: 5px;');
 
         label.setAttribute('for', labelFor[i]);
         label.textContent = labelName[i];
 
-        input.setAttribute('type', inputType[i]);
-        input.setAttribute('id', inputId[i]);
-        input.setAttribute('name', inputName[i]);
+        if (i < labelName.length - 1) {
+            contactDiv.appendChild(input);
+            input.setAttribute('type', inputType[i]);
+            input.setAttribute('id', inputId[i]);
+            input.setAttribute('name', inputName[i]);
+        } else {
+            contactDiv.appendChild(textArea);
+            textArea.setAttribute('id', inputId[i]);
+            textArea.setAttribute('name', inputName[i]);
+            textArea.setAttribute('style', 'resize: none;' +
+                                           'height: 75px;');
+        }
     }
 
     let buttonDiv = document.createElement('div');
@@ -64,4 +87,6 @@ function buildContactForm() {
     buttonDiv.appendChild(contactButton);
     contactButton.type = 'submit';
     contactButton.innerText = 'Send Message';
+
+    buttonDiv.setAttribute('style', 'margin-top: 10px;');
 }
