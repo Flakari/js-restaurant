@@ -29,6 +29,11 @@ function createMenu() {
                                       'font-size: 1.1em;' +
                                       'grid-gap: 10px;');
 
+    populateMenu();
+}
+
+function populateMenu() {
+    let contentGrid = document.querySelector('section');
 
     let menuImages = ['images/pizza_menu.jpg',
                       'images/flatbreadpizza_menu.jpg',
@@ -61,6 +66,7 @@ function createMenu() {
         image.setAttribute('style', 'max-width: 100%;');
         description.setAttribute('style', 'font-family: Arial, sans-serif;' +
                                           'margin: 10px 5px;');
+
         contentGrid.appendChild(menuItem);
         menuItem.appendChild(image);
         menuItem.appendChild(title);
