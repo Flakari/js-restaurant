@@ -14,7 +14,6 @@ function createContact() {
     }
 
     content.appendChild(contactHeader);
-
     contactHeader.textContent = 'Contact Us!';
 
     contactHeader.setAttribute('style', 'font-family: "Aharoni", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;' +
